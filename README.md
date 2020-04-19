@@ -3,7 +3,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
-### `yarn start`
+`yarn start` or `npm run start` 
+
+and then view at http://localhost:3000/album/16
 
 ## Notes
 - fetching from the external api could use a proxy server and I haven't secured the credentials
