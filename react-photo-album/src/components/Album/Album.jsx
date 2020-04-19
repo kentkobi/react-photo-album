@@ -1,31 +1,27 @@
 import React, { useState, useEffect } from "react";
 import {useParams} from 'react-router-dom';
 import './Album.scss';
-import Photo from '../Photo/Photo';
+import AlbumCard from '../AlbumCard/AlbumCard';
 import Button from '../Button/Button';
-
 
 export default function Album( props ) {
 	const [albumData, setAlbumData] = useState([]);
 	const [photosData, setPhotosData] = useState([]);
 	const [isPhotosLoading, setIsPhotosLoading] = useState(true);
 	
-	const API_BASE_URL = 'https://gorest.co.in/public-api';
-	const API_ALBUM_ENDPOINT = '/albums/';
-	const API_PHOTOS_ENDPOINT = '/photos?album_id=';
-	const PARAMS = '?_format=json&access-token=Glr6TxYrN9QzOYFrgf-O1gV9grDc4XN0Qh3p';
+	const apiRoot = 'https://gorest.co.in/public-api';
+	const apiToken = 'Glr6TxYrN9QzOYFrgf-O1gV9grDc4XN0Qh3p';
 	let {albumId} = useParams();
 
-
 	useEffect(() => {
-		fetch(`${API_BASE_URL}${API_ALBUM_ENDPOINT}${albumId}${PARAMS}`,)
+		fetch(`${apiRoot}/albums/${albumId}?_format=json&access-token=${apiToken}`,)
 	      .then(res => res.json())
 	      .then(response => {
 	        setAlbumData(response.result);
 	      })
 	      .catch(error => console.log(error));
 
-	    fetch(`${API_BASE_URL}${API_PHOTOS_ENDPOINT}${albumId}${PARAMS}`,)
+	    fetch(`${apiRoot}/photos?album_id=${albumId}?_format=json&access-token=${apiToken}`,)
 	      .then(res => res.json())
 	      .then(response => {
 	        setPhotosData(response.result);
@@ -50,7 +46,7 @@ export default function Album( props ) {
 			</div>
 			<div className="album-content">
 				{isPhotosLoading && <p>Wait I'm Loading photos for you</p>}
-				{ photosData.map( photo => <Photo key={photo.id} id={photo.id} url={photo.thumbnail} title={photo.title} /> ) }
+				{ photosData.map( photo => <AlbumCard key={photo.id} id={photo.id} url={photo.thumbnail} title={photo.title} /> ) }
 			</div>
 		</form>
 	);

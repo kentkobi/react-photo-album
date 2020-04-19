@@ -3,15 +3,9 @@
 .photo {
 	display: flex;
 	align-items: center;
-
 	border: 2px solid transparent;
 	cursor: pointer;
-	position: relative;
 	padding: 16px;
-	max-width: calc(33% - 36px);
-	min-width: 300px;
-
-	transition: 300ms border-color linear;
 
 	&:hover {
 		border-color: $color-accent;
@@ -20,7 +14,6 @@
 
 	.photo-image{
 		padding: 30px;
-
 		background-color: $color-grey-light;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -32,6 +25,7 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		margin-right: 21px;
 	}
 
 	.photo-action{
@@ -49,7 +43,6 @@
 		}
 
 		&-selected {
-			transition: 300ms all linear;
 			visibility: hidden;
 			opacity: 0;
 			margin: 0 12px;

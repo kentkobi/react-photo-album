@@ -11,12 +11,9 @@
     }
 }
 .album-content {
-  margin: 0;
-  padding: 20px 23px;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  background-color: $color-grey-light;
+	margin: 0;
+	padding: 20px 23px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	background-color: $color-grey-light;
 }

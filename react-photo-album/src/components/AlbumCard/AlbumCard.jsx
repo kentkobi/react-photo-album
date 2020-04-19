@@ -1,5 +1,5 @@
 import React from "react";
-import './Photo.scss';
+import './AlbumCard.scss';
 
 export default function Photo( props ) {
 	const { id, url, title } = props;

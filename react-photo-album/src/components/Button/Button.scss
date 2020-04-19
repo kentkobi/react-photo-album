@@ -1,17 +1,15 @@
 @import "src/styles/variables";
 
 button {
-  color: #fff;
-  border: none;
-  text-align: center;
-  border-radius: 4px;
-  line-height: 12px;
-  cursor: pointer;
-  outline: none;
-  font-weight: 600;
-  font-size: 1em;
-  padding: 10px 14px 10px;
-  font-size: 12px;
-
-  background-color: $color-secondary;
+	color: #fff;
+	border: none;
+	text-align: center;
+	border-radius: 4px;
+	line-height: 12px;
+	cursor: pointer;
+	outline: none;
+	font-weight: 600;
+	padding: 10px 14px 10px;
+	font-size: 12px;
+	background-color: $color-primary;
 }
