@@ -7,6 +7,7 @@ In the project directory, you can run:
 
 ## Notes
 - fetching from the external api could use a proxy server and I haven't secured the credentials
+- project doesn't have env variables set up
 - opted to not use anything third-party to handle layout and presentation, was a pretty small effort to style without
 - no error handling
 - no testing
