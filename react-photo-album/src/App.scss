@@ -1,0 +1,10 @@
+@import "src/styles/variables";
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+
+  max-width: 1180px;
+  margin: 0 auto;
+  color: $color-default;
+}
